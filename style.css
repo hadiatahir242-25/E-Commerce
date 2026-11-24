@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f5;
+    color: #303b35;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e9e3;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #668b70;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555f58;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #668b70;
+}
+
+.cart {
+    font-size: 14px;
+    font-weight: bold;
+    color: #54765d;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: #e5eee6;
+}
+
+.tagline {
+    color: #668b70;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 18px;
+    color: #283b2e;
+}
+
+.hero p:not(.tagline) {
+    color: #68766b;
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.8;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: #668b70;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: #456b50;
+}
+
+/* Products */
+#products {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #283b2e;
+}
+
+.section-heading p {
+    color: #829087;
+    font-size: 14px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e4ebe5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(65, 100, 75, 0.12);
+}
+
+.image-box {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    background: #e8eee8;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.card:hover .image-box img {
+    transform: scale(1.05);
+}
+
+.sale {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #668b70;
+    color: white;
+    padding: 7px 12px;
+    font-size: 10px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+.rating {
+    color: #d4a64c;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.rating small {
+    color: #999;
+    margin-left: 5px;
+}
+
+.card-body h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #34453a;
+}
+
+.card-body p {
+    color: #78837b;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 62px;
+}
+
+.purchase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 21px;
+    font-weight: bold;
+    color: #54765d;
+}
+
+button {
+    background: #668b70;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #456b50;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #304638;
+    color: white;
+}
+
+.site-footer h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.site-footer p {
+    color: #dce7de;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .site-header {
+        padding: 18px 5%;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .cart {
+        display: none;
+    }
+}
